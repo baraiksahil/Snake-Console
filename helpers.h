@@ -81,6 +81,24 @@ int score = 0;
 // Speed (microseconds delay)
 int delay = 150000;
 
+void foodSpawn();
+
+void setup()
+{
+    xSnake = 20;
+    ySnake = 10;
+    snakeX.clear();
+    snakeY.clear();
+    // Initialize snake body with the starting head position
+    snakeX.push_back(xSnake);
+    snakeY.push_back(ySnake);
+    gameOver = false;
+    score = 0;
+    direction = 'D';
+    delay = 150000;
+    foodSpawn();
+}
+
 void foodSpawn()
 {
     // xFood = rand() % (xWidth - 2) + 1;

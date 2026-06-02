@@ -7,11 +7,7 @@ int main()
 
     srand(time(0));
 
-    // Initial snake
-    snakeX.push_back(xSnake);
-    snakeY.push_back(ySnake);
-
-    foodSpawn();
+    setup();
 
     // Clear screen once
     std::cout << "\033[2J";
@@ -21,7 +17,7 @@ int main()
         draw();
         input();
         logic();
-        usleep(150000); // 150ms delay for standard normal gameplay speed
+        usleep(delay);
     }
     // Clear screen
     std::cout << "\033[2J\033[H";
